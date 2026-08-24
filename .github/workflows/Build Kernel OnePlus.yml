@@ -6,65 +6,9 @@ on:
         type: choice
         description: "配置文件//Configuration file"
         required: true
-        default: oneplus_ace2_pro_b
+        default: oneplus_ace3_v
         options:
-          - oneplus_nord_n30_se_5g_v
-          - oneplus_10r_v
-          - oneplus_nord_3_b
-          - oneplus_ace_v
-          - oneplus_ace_race_v
-          - oneplus_10_pro_b
-          - oneplus_10t_v
-          - oneplus_11r_b
-          - oneplus_ace2_b
-          - oneplus_pad_lite_b
-          - oneplus_pad_mt6983_b
-          - oneplus_ace_2v_b
-          - oneplus_ace_pro_v
-          - oneplus_11_b
-          - oneplus_12r_b
-          - oneplus_ace2_pro_b
-          - oneplus_ace3_b
-          - oneplus_open_b
-          - oneplus_nord_ce4_b
-          - oneplus_n6_b
-          - oneplus_n6x_b
-          - oneplus_12_b
-          - oneplus_pad_go_2_b
-          - oneplus_turbo_6x_b
-          - oneplus_nord_ce4_lite_5g_b
-          - oneplus_nord_ce6
-          - oneplus_nord_ce6_lite_b
-          - oneplus_turbo_6v
-          - oneplus_nord_4_b
-          - oneplus_ace_3v_b
-          - oneplus_pad_mt6897_b
-          - oneplus_13r_b
-          - oneplus_ace3_pro_b
-          - oneplus_ace5_b
-          - oneplus_pad_pro_b
-          - oneplus_pad2_b
-          - oneplus_nord_ce5_b
-          - oneplus_nord_5_b
-          - oneplus_ace5_pro_b
-          - oneplus_13_b
-          - oneplus_13t_b
-          - oneplus_13s_b
-          - oneplus_pad_2_pro_b
-          - oneplus_pad_3_b
-          - oneplus_ace5_race_b
-          - oneplus_ace5_ultra_b
-          - oneplus_pad2_mt6991_b
-          - oneplus_ace_6
-          - oneplus_turbo_6
-          - oneplus_nord_6
-          - oneplus_ace_6t
-          - oneplus_15r
-          - oneplus_15
-          - oneplus_15t
-          - oneplus_pad_3_pro
-          - oneplus_pad_4
-          - oneplus_ace6_ultra
+          - oneplus_ace3_v
       SUSFS_CI:
         type: choice
         description: "SUSFS模块下载调用方向//SUSFS module branch"
@@ -92,7 +36,7 @@ on:
         type: string
         description: "动态清单仓库所有者//Manifest repository owner"
         required: true
-        default: "Numbersf"
+        default: "OnePlusOSS"
       BUILD_TIME:
         type: string
         description: "自定义构建时间(输入F使用UTCT或-1关闭)//Custom build time (Enter F to use UTCT, or -1 to disable)"
@@ -102,7 +46,7 @@ on:
         type: string
         description: "管理器分支名(必填)/内置分支名(必填)/自定义版本标识(留空不修改)/回退分支提交哈希版本(留空不修改)//Manager Branch name (Required) / Builtin branch name (Required) / Custom version identifier (Leave blank to not modify) / Rollback branch commit hash version (Leave blank to not modify)"
         required: false
-        default: "main/main/Numbersf/"
+        default: "main/main/dong/"
       LZ4_UPDATE:
         type: boolean
         description: "是否升级LZ4到上游最新？//Upgrade LZ4 to the latest upstream?"
@@ -112,7 +56,7 @@ on:
         type: string
         description: "ZRAM(0关闭1开启)/算法名/大小//ZRAM (0: disable, 1: enable) / Algorithm name / Size"
         required: true
-        default: "0/lz4kd/8589934592"
+        default: "0"
       SUFFIX:
         type: string
         description: "自定义内核后缀(不输入使用RAND_STR或-1关闭)//Custom kernel suffix (Leave blank to use RAND_STR, or -1 to disable)"
@@ -146,7 +90,7 @@ on:
         type: boolean
         description: "是否添加Unicode不可见字码点绕过读取漏洞修复？//Add patch for Unicode invisible code point read bypass vulnerability?"
         required: true
-        default: false
+        default: true
       SCHED_HMBIRD:
         type: boolean
         description: "是否添加风驰驱动1.0？//Add Fengchi (HMBIRD) Driver 1.0?"
